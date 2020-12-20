@@ -39,7 +39,7 @@ router
         fs.writeFileSync('./db/db.json', JSON.stringify(newNoteData), (err) => {
             if (err) throw err;
         });
-        res.json(JSON.stringify(newNoteData));
+        res.end();
     })
 
 module.exports = router;
