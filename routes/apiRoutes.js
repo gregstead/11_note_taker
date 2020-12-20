@@ -34,13 +34,12 @@ router
         //Record to be deleted
         const deleteId = req.params.id;
         // Remove post with matching record ID
-        const newNoteData = noteData.filter(note => note.id != deleteId);
+        const newNoteData = noteData.filter((note) => note.id != deleteId);
         // Write changes to db
         fs.writeFileSync('./db/db.json', JSON.stringify(newNoteData), (err) => {
             if (err) throw err;
-            console.log(`API DELETE sucess`);
         });
-        res.end();
+        res.json(JSON.stringify(newNoteData));
     })
 
 module.exports = router;
