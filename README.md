@@ -1,6 +1,6 @@
 # 11_note_taker
 
-A note taking application. Notes can be saved and deleted.
+A simple note-taking app that can be used to create, read, update, and delete notes.
 
 ## Table of contents
 
